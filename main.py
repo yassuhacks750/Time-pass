@@ -177,7 +177,7 @@ bot.add_handler(MessageHandler(auth.list_users_cmd, filters.command("users") & f
 bot.add_handler(MessageHandler(auth.my_plan_cmd, filters.command("plan") & filters.private))
 
 cookies_file_path = os.getenv("cookies_file_path", "youtube_cookies.txt")
-api_url = "https://appxsignurl.vercel.app"
+api_url = "https://master-api-v3.vercel.app"
 api_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzkxOTMzNDE5NSIsInRnX3VzZXJuYW1lIjoi4p61IFtvZmZsaW5lXSIsImlhdCI6MTczODY5MjA3N30.SXzZ1MZcvMp5sGESj0hBKSghhxJ3k1GTWoBUbivUe1I"
 photologo = 'https://cdn.pixabay.com/photo/2025/05/21/02/38/ai-generated-9612673_1280.jpg' #https://envs.sh/GV0.jpg
 photoyt = 'https://tinypic.host/images/2025/03/18/YouTube-Logo.wine.png' #https://envs.sh/GVi.jpg
@@ -690,7 +690,7 @@ async def txt_handler(bot: Client, m: Message):
                 url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
 
 
-                url = apis["https://appxsignurl.vercel.app"] + url
+                url = apis["https://master-api-v3.vercel.app"] + url
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
